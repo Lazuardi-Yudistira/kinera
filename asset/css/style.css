@@ -1,0 +1,916 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --main-color: #77d4fc;
+  --second-color: rgb(55, 218, 5);
+  --third-color: #5961f8;
+  --fourth-color: #4b8ef1;
+  --fifth-color: linear-gradient(
+    105deg,
+    rgba(91, 104, 235, 1) 0%,
+    rgba(40, 225, 253, 1) 100%
+  );
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* header */
+/* navbar */
+/* .navbar {
+  padding: 20px 0px;
+}
+
+.navbar-brand img {
+  padding-left: 10px;
+  margin-right: 10px;
+} */
+
+.navbar ul li a {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.navbar ul li a:hover {
+  color: var(--main-color) !important;
+  background-color: var(--bg-color);
+  font-weight: bolder;
+}
+
+.navbar-brand span {
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.navbar-brand span p {
+  color: var(--second-color) !important;
+  display: inline-block;
+  font-size: 16px !important;
+}
+
+/* navbar change color while scrolling */
+#header.header-scrolled {
+  background: var(--text-color);
+  /* padding: 20px 0; */
+  /* height: 105px; */
+  transition: all 0.5s;
+  font-weight: 500;
+  box-shadow: 0 0 1rem #1f242d;
+}
+
+#header.header-scrolled span {
+  color: var(--fourth-color);
+}
+
+#header.header-scrolled ul li a {
+  color: var(--fourth-color);
+  font-weight: bolder;
+}
+
+#header.header-scrolled ul li a:hover {
+  background-color: var(--text-color);
+  color: var(--main-color) !important;
+}
+
+@media (max-width: 990px) {
+  #navbarNav ul li a {
+    color: white;
+    transition: all 0.5s;
+    font-weight: bolder;
+  }
+}
+
+@media (max-width: 990px) {
+  .navbar ul li a:hover {
+    color: white;
+    background-color: var(--text-color);
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 990px) {
+  #navbarNav {
+    background-color: var(--second-bg-color);
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 10%;
+  }
+}
+
+/* main */
+/* global configuration */
+article,
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.line {
+  border: 1px solid var(--second-color);
+  width: 20%;
+  /* margin-left: 42.5%; */
+}
+
+.line2 {
+  border: 1px solid var(--main-color);
+  width: 10%;
+  margin-left: 45%;
+}
+
+.tombolWa .btn {
+  border: 0.1rem solid;
+  color: var(--text-color);
+  font-weight: bolder;
+}
+
+.tombolWa .btn:hover {
+  border: none;
+  background: rgb(19, 175, 240);
+  background: linear-gradient(
+    105deg,
+    rgba(91, 104, 235, 1) 0%,
+    rgba(40, 225, 253, 1) 100%
+  );
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.heading {
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+}
+
+.heading span {
+  color: var(--main-color);
+}
+
+.heading2 {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--main-color);
+}
+
+.heading2 span {
+  color: white;
+}
+
+p {
+  color: gray;
+}
+
+/* ===== jumbotron ======= */
+.jumbotron {
+  color: #fff !important;
+  background-image: url("../img/aset1.png");
+  background-size: cover; /* biar gambar isi full layar */
+  width: 100%;
+  min-height: 20vh; /* tinggi penuh layar */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom-right-radius: 30%;
+  padding: 200px 0 50px 0; /* jarak atas & bawah */
+}
+
+.jumbotron-logo {
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-2.4rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.jumbotron p {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.jumbotron h3 {
+  font-weight: 700;
+  font-size: 34px;
+}
+
+.jumbotron h1 {
+  font-weight: 700;
+  line-height: 1.3;
+  font-size: 80px;
+}
+
+.social-links a {
+  font-size: 1.3rem;
+  display: inline-block;
+  color: white;
+  line-height: 1;
+  margin-right: 8px;
+  border: 0.15rem solid white;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  transition: 0.3s;
+}
+
+.jumbotron .social-links a {
+  margin-right: 1rem;
+}
+
+.social-links a:hover {
+  background: rgb(19, 175, 240);
+  background: linear-gradient(
+    105deg,
+    rgba(91, 104, 235, 1) 0%,
+    rgba(40, 225, 253, 1) 100%
+  );
+  color: white;
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+.jumbotron .btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: white;
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem white;
+  font-size: 1.2rem;
+  color: var(--fourth-color);
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.5s ease;
+}
+
+.jumbotron .btn:hover {
+  box-shadow: none;
+  color: white;
+  background: rgb(19, 175, 240);
+  background: linear-gradient(
+    105deg,
+    rgba(91, 104, 235, 1) 0%,
+    rgba(40, 225, 253, 1) 100%
+  );
+}
+
+/* Ukuran layar sangat kecil */
+@media (max-width: 576px) {
+  .jumbotron {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .jumbotron h1 {
+    font-size: 40px;
+  }
+  .textartikel1,
+  .textartikel2 {
+    font-size: 18px;
+    line-height: 2rem;
+  }
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 990px) {
+  .jumbotron-img {
+    display: none;
+  }
+}
+
+/* end of jumbotron */
+
+/* About Devriyu */
+.about {
+  background-color: white;
+  color: var(--second-bg-color);
+}
+
+.about img {
+  width: 60%; /* Scales to 100% of its parent container's width */
+  height: auto; /* Maintains original aspect ratio */
+  margin-left: 5rem;
+}
+
+.tombolWa2 {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--fourth-color);
+  font-size: 1.2rem;
+  color: var(--fourth-color);
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.5s ease;
+}
+
+.tombolWa2:hover {
+  box-shadow: none;
+  color: white;
+  background: rgb(19, 175, 240);
+  background: linear-gradient(
+    105deg,
+    rgba(91, 104, 235, 1) 0%,
+    rgba(40, 225, 253, 1) 100%
+  );
+}
+
+/* end of about */
+
+/* fitur keunggulan */
+.fitur {
+  background-color: white;
+}
+
+/* end of fitur */
+
+/* price list */
+.harga .checklist {
+  color: var(--fourth-color);
+  font-size: 1.5rem;
+}
+
+.harga .basic {
+  color: white;
+  background: var(--second-bg-color);
+}
+
+.harga .premium {
+  color: white;
+  background: var(--fourth-color);
+}
+
+.harga .profesional {
+  color: white;
+  background: linear-gradient(
+    105deg,
+    rgba(91, 104, 235, 1) 0%,
+    rgba(40, 225, 253, 1) 100%
+  );
+}
+
+/* end of price list */
+
+/* faq */
+.template_faq {
+  background: #edf3fe none repeat scroll 0 0;
+}
+
+.panel-group {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 3px;
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.04);
+  margin-bottom: 0;
+  padding: 30px;
+}
+
+#accordion .panel {
+  border: medium none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 0 15px 10px;
+}
+
+#accordion .panel-heading {
+  border-radius: 30px;
+  padding: 0;
+}
+
+#accordion .panel-title a {
+  background: linear-gradient(
+    105deg,
+    rgba(91, 104, 235, 1) 0%,
+    rgba(40, 225, 253, 1) 100%
+  );
+  border: 1px solid transparent;
+  border-radius: 30px;
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 20px 12px 50px;
+  position: relative;
+  transition: all 0.3s ease 0s;
+}
+
+#accordion .panel-title a.collapsed {
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+#accordion .panel-title a::after,
+#accordion .panel-title a.collapsed::after {
+  background: linear-gradient(
+    105deg,
+    rgba(91, 104, 235, 1) 0%,
+    rgba(40, 225, 253, 1) 100%
+  );
+  border: 1px solid transparent;
+  border-radius: 50%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.58);
+  color: #fff;
+  content: "";
+  font-family: fontawesome;
+  font-size: 25px;
+  height: 55px;
+  left: -20px;
+  line-height: 55px;
+  position: absolute;
+  text-align: center;
+  top: -5px;
+  transition: all 0.3s ease 0s;
+  width: 55px;
+}
+
+#accordion .panel-title a.collapsed::after {
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #ddd;
+  box-shadow: none;
+  color: #333;
+  content: "";
+}
+
+#accordion .panel-body {
+  background: transparent none repeat scroll 0 0;
+  border-top: medium none;
+  padding: 20px 25px 10px 9px;
+  position: relative;
+}
+
+#accordion .panel-body p {
+  border-left: 1px dashed #8c8c8c;
+  padding-left: 25px;
+}
+
+#accordion .panel-body ol li {
+  border-left: 1px dashed #8c8c8c;
+  padding-left: 25px;
+}
+
+/* end of faq */
+
+/* my bestproduk */
+#bestproduk {
+  /* padding-top: 115px; */
+  padding-top: 200px;
+  padding-bottom: 95px;
+  background: rgb(19, 175, 240);
+  background: linear-gradient(
+    105deg,
+    rgba(91, 104, 235, 1) 0%,
+    rgba(40, 225, 253, 1) 100%
+  );
+  /* border-top-right-radius: 15%;
+  border-bottom-left-radius: 15%; */
+}
+
+.bestproduk .page-item .page-link {
+  background-color: var(--second-bg-color);
+  border: none;
+  color: white;
+}
+
+.bestproduk .page-item .page-link:hover {
+  color: var(--main-color);
+}
+
+#bestproduk #bestproduk-flters {
+  padding: 0;
+  margin: 5px 0 35px 0;
+  list-style: none;
+  text-align: center;
+}
+
+#bestproduk #bestproduk-flters li {
+  cursor: pointer;
+  margin: 15px 15px 15px 0;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #666666;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background: #fff;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+#bestproduk #bestproduk-flters li:last-child {
+  margin-right: 0;
+}
+
+#bestproduk .bestproduk-wrap {
+  box-shadow: 0px 2px 12px rgba(255, 255, 255, 0.08);
+  transition: 0.3s;
+}
+
+#bestproduk .bestproduk-wrap:hover {
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.16);
+}
+
+#bestproduk .bestproduk-item {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+}
+
+#bestproduk .bestproduk-item figure {
+  background: #000;
+  overflow: hidden;
+  height: 240px;
+  position: relative;
+  border-radius: 4px 4px 0 0;
+  margin: 0;
+}
+
+#bestproduk .bestproduk-item figure:hover img {
+  opacity: 0.4;
+  transition: 0.3s;
+}
+
+figure .imgWeb {
+  height: 100%;
+  width: 100%;
+}
+
+#bestproduk .bestproduk-item figure .link-preview,
+#bestproduk .bestproduk-item figure .link-details {
+  position: absolute;
+  display: inline-block;
+  opacity: 0;
+  line-height: 1;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.2s linear;
+}
+
+#bestproduk .bestproduk-item figure .link-preview i,
+#bestproduk .bestproduk-item figure .link-details i {
+  padding-top: 6px;
+  font-size: 22px;
+  color: #333;
+}
+
+#bestproduk .bestproduk-item figure .link-preview:hover,
+#bestproduk .bestproduk-item figure .link-details:hover {
+  background: var(--bg-color);
+}
+
+#bestproduk .bestproduk-item figure .link-preview:hover i,
+#bestproduk .bestproduk-item figure .link-details:hover i {
+  color: var(--main-color);
+}
+
+#bestproduk .bestproduk-item figure .link-preview {
+  left: calc(50% - 38px);
+  top: calc(50% - 18px);
+}
+
+#bestproduk .bestproduk-item figure .link-details {
+  right: calc(50% - 38px);
+  top: calc(50% - 18px);
+}
+
+#bestproduk .bestproduk-item figure:hover .link-preview {
+  opacity: 1;
+  left: calc(50% - 44px);
+}
+
+#bestproduk .bestproduk-item figure:hover .link-details {
+  opacity: 1;
+  right: calc(50% - 44px);
+}
+
+#bestproduk .bestproduk-item .bestproduk-info {
+  background: #fff;
+  text-align: center;
+  padding: 30px;
+  height: 90px;
+  border-radius: 0 0 3px 3px;
+}
+
+#bestproduk .bestproduk-item .bestproduk-info h4 {
+  font-size: 18px;
+  line-height: 1px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  padding-bottom: 0;
+}
+
+#bestproduk .bestproduk-item .bestproduk-info h4 a {
+  color: #333;
+}
+
+#bestproduk .bestproduk-item .bestproduk-info p {
+  padding: 0;
+  margin: 0;
+  color: #b8b8b8;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* end bestproduk */
+
+/* logo my client */
+.logo {
+  background-color: white;
+  width: 100%;
+}
+
+.logo_slider {
+  overflow: hidden;
+  width: 90%; /* Menggunakan persentase untuk lebih responsif */
+  max-width: 552px; /* Batas maksimum */
+  margin: auto;
+}
+
+.logo_slider ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  position: relative;
+  animation: mymove 10s linear infinite;
+}
+
+.logo_slider ul li {
+  flex-shrink: 0;
+  flex-grow: 0;
+  display: block;
+  width: 20vw; /* Menggunakan viewport width agar lebih responsif */
+  max-width: 150px; /* Maksimum lebar */
+  height: 20vw;
+  max-height: 150px; /* Maksimum tinggi */
+  border-radius: 50%;
+}
+
+.logo_slider ul li a img {
+  width: 100%;
+  height: 100%; /* Menjamin gambar memenuhi lingkaran */
+  object-fit: cover;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Standard syntax */
+@keyframes mymove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Tambahkan media queries untuk layar kecil */
+@media (max-width: 768px) {
+  .logo_slider ul li {
+    width: 30vw;
+    max-width: 100px;
+    height: 30vw;
+    max-height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo_slider ul li {
+    width: 40vw;
+    max-width: 80px;
+    height: 40vw;
+    max-height: 80px;
+  }
+}
+
+/* end client */
+
+/* Kontak */
+#contact {
+  color: white;
+  background-color: var(--bg-color);
+  /* background-color: #048221; */
+  /* background-color: #999999; */
+  border-top-left-radius: 13%;
+  border-top-right-radius: 13%;
+}
+
+.kontak {
+  padding-bottom: 50px;
+}
+
+.deskripsiKontak {
+  margin-bottom: 50px;
+}
+
+.infoKontak {
+  margin-bottom: 50px;
+}
+
+.kontak .container .info-item i {
+  font-size: 20px;
+  color: var(--main-color);
+  float: left;
+  width: 44px;
+  height: 44px;
+  /* background: white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  margin-right: 15px;
+}
+
+.kontak .container .info-item p {
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 13px;
+  color: rgb(255, 255, 255);
+}
+
+.kontak .container .info-item p a {
+  color: white;
+  text-decoration: none;
+}
+
+.kontak .container .info-item p a:hover {
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+/* end kontak */
+
+/* Footer */
+.footer {
+  color: #fff;
+  /* background: url("../img/footer-bg.jpg") top center no-repeat; */
+  /* background-size: cover; */
+  font-size: 16px;
+  padding: 50px 0 50px 0;
+  position: relative;
+}
+
+.footer .footer-links a {
+  text-decoration: none;
+}
+
+.footer:before {
+  content: "";
+  background: #161a20;
+  position: absolute;
+  inset: 0;
+}
+
+.footer .footer-content .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer .footer-content .footer-links ul li {
+  padding: 8px 0;
+}
+
+.footer .footer-legal .credits {
+  padding-top: 4px;
+  font-size: 13px;
+  color: #fff;
+}
+
+.footer .footer-legal .credits a {
+  color: rgb(127, 225, 255);
+  text-decoration: none;
+}
+
+.footer .footer-legal .credits a:hover {
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+/* Scroll Up */
+#myBtn {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 35px;
+  /* Place the button at the bottom of the page */
+  right: 40px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  background-color: rgba(0, 0, 0, 0);
+  /* Set a background color */
+  color: var(--fourth-color);
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  /* border-radius: 30%; */
+  /* Rounded corners */
+}
+
+#myBtn i {
+  font-size: 40px;
+}
+
+#myBtn .tombolUp:hover {
+  color: var(--main-color);
+}
+
+/* Whatsapp floating button */
+.wa-popup {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  left: 25px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+
+.wa-popup:hover {
+  background-color: #fff;
+  color: #25d366;
+}
+
+.my-float {
+  margin-top: 16px;
+}
+
+.dialog-pop {
+  position: fixed;
+  height: 30px;
+  border-radius: 15px;
+  bottom: 45px;
+  left: 65px;
+  background-color: rgb(238, 238, 238);
+  color: #000;
+  padding-left: 25px;
+  padding-top: 3px;
+  padding-right: 10px;
+}
+
+.dialog-pop:hover {
+  background-color: #25d366;
+  color: white;
+}
+
+@media (max-width: 482px) {
+  .dialog-pop {
+    display: none;
+  }
+}
+
+/* end of bar progress animation scroll */
